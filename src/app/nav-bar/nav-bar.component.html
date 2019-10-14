@@ -1,0 +1,21 @@
+<header>
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">
+      <img src="https://fontmeme.com/permalink/191014/d457ecaf6c9433a0de1227a473d31137.png" alt="Netflix Mini Logo">
+    </a>
+    <button class="navbar-toggler" type="button" (click)="isCollapsed=!isCollapsed" aria-controls="navbarSupportedContent" [attr.aria-expanded]="!isCollapsed" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" [ngbCollapse]="isCollapsed">
+      <ul class="navbar-nav mr-5 ml-auto">
+        <li class="nav-item mr-5">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item mr-5">
+          <a class="nav-link" href="#">Favorites</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
