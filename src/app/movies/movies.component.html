@@ -1,13 +1,13 @@
 <main class="container">
   <h1>Search Movies and Series</h1>
-  <form>
+  <form #searchForm="ngForm" (ngSubmit)="search(searchForm.value.searchTerm)" novalidate>
     <div class="form-group row">
-      <label class="sr-only" for="search-term">Search Term</label>
+      <label class="sr-only" for="searchTerm">Search Term</label>
       <div class="col-md-10 col-sm-8 col-xs-6 my-2">
-        <input type="text" class="form-control" id="search-term" placeholder="Search Term eg Avengers">
+        <input type="text" [(ngModel)]="searchTerm" class="form-control" name="searchTerm" id="searchTerm" placeholder="Search Term eg Avengers" required>
       </div>
       <div class="col-md-2 col-sm-4 col-xs-6 my-2">
-        <button type="submit" class="btn btn-block btn-danger">Search</button>
+        <button type="submit" class="btn btn-block btn-danger" [disabled]="searchForm.invalid">Search</button>
       </div>
     </div>
   </form>
