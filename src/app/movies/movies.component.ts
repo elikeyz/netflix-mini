@@ -18,11 +18,11 @@ export class MoviesComponent implements OnInit {
   ngOnInit() {
   }
 
-  search(searchTerm, nextPage) {
+  search() {
     this.movies = [];
     this.nextPage = 1;
     this.isLoadingMovies = true;
-    this.movieService.searchMovies(searchTerm, nextPage)
+    this.movieService.searchMovies(this.searchTerm, this.nextPage)
       .subscribe((response) => {
         this.movies = [...this.movies, ...response.Search];
         this.nextPage = this.nextPage + 1;
