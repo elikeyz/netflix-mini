@@ -11,13 +11,17 @@ import { LandingComponent } from './landing/landing.component';
 import { appRoutes } from './routes';
 import { MoviesComponent } from './movies/movies.component';
 import { MovieService } from './movie.service';
+import { MovieComponent } from './movie/movie.component';
+import { Error404Component } from './error404/error404.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
     LandingComponent,
-    MoviesComponent
+    MoviesComponent,
+    MovieComponent,
+    Error404Component
   ],
   imports: [
     BrowserModule,

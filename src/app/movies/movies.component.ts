@@ -11,6 +11,7 @@ export class MoviesComponent implements OnInit {
   searchTerm: string;
   nextPage = 1;
   movies: IMovie[];
+  isLoadingMovies = false;
 
   constructor(private movieService: MovieService) { }
 
@@ -20,10 +21,13 @@ export class MoviesComponent implements OnInit {
   search(searchTerm, nextPage) {
     this.movies = [];
     this.nextPage = 1;
+    this.isLoadingMovies = true;
     this.movieService.searchMovies(searchTerm, nextPage)
       .subscribe((response) => {
         this.movies = [...this.movies, ...response.Search];
         this.nextPage = this.nextPage + 1;
+        this.isLoadingMovies = false;
+        console.log(this.movies);
       });
   }
 
