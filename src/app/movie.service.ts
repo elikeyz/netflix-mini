@@ -12,7 +12,7 @@ export class MovieService {
   constructor(private http: HttpClient) { }
 
   searchMovies(searchTerm: string, nextPage: number = 1): Observable<IMovieSearch> {
-    return this.http.get<IMovieSearch>(`http://www.omdbapi.com/?apikey=b48eb6eb&page=${nextPage}&s=${searchTerm}`)
+    return this.http.get<IMovieSearch>(`https://www.omdbapi.com/?apikey=b48eb6eb&page=${nextPage}&s=${searchTerm}`)
       .pipe(catchError(this.handleError<IMovieSearch>('searchMovies')));
   }
 
