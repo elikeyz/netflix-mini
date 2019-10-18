@@ -27,7 +27,6 @@ export class MoviesComponent implements OnInit {
         this.movies = [...this.movies, ...response.Search];
         this.nextPage = this.nextPage + 1;
         this.isLoadingMovies = false;
-        console.log(this.movies);
       });
   }
 
