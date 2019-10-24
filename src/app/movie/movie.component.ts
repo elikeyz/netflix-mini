@@ -16,7 +16,6 @@ export class MovieComponent implements OnInit {
   ngOnInit() {
     this.route.data.forEach((data) => {
       this.movie = data.movie;
-      console.log(this.movie);
     });
   }
 

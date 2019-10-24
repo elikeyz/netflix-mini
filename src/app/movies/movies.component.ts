@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { MovieService } from '../movie.service';
+import { SESSION_STORAGE_TOKEN, SessionStorage } from '../session-storage.service';
 import { IMovie } from '../movie.model';
 
 @Component({
@@ -13,7 +14,7 @@ export class MoviesComponent implements OnInit {
   movies: IMovie[];
   isLoadingMovies = false;
 
-  constructor(private movieService: MovieService) { }
+  constructor(private movieService: MovieService, @Inject(SESSION_STORAGE_TOKEN) private sessionStorage: SessionStorage) { }
 
   ngOnInit() {
   }

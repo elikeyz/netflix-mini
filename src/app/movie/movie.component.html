@@ -22,13 +22,13 @@
   <br>
   <div class="row">
     <div class="col-md-6 mb-5">
+      <p>{{ movie.Plot }}</p>
+    </div>
+    <div class="col-md-6">
       <figure>
         <img [src]="movie.Poster" [alt]="movie.Title" class="poster">
         <figcaption>{{ movie.Title }}</figcaption>
       </figure>
-    </div>
-    <div class="col-md-6">
-      <p>{{ movie.Plot }}</p>
     </div>
   </div>
 </main>
