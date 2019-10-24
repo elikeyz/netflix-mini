@@ -18,7 +18,7 @@
     <div *ngFor="let movie of movies" class="col-md-4 col-sm-6 col-xs-12 my-3">
       <a class="card-link" [routerLink]="['/movies', movie.imdbID]">
         <div class="card bg-secondary">
-          <img class="card-img-top" src="{{ movie.Poster }}" alt="{{ movie.Title }} Poster">
+          <img class="card-img-top" [src]="movie.Poster" [alt]="movie.Title">
           <div class="card-body">
             <h6 class="card-title">{{ movie.Title }} ({{ movie.Year }})</h6>
           </div>

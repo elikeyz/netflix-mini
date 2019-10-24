@@ -8,5 +8,6 @@ export const appRoutes = [
   { path: '', component: LandingComponent },
   { path: 'movies', component: MoviesComponent },
   { path: 'movies/:id', component: MovieComponent, resolve: { movie: MovieResolverService } },
-  { path: '404', component: Error404Component }
+  { path: '404', component: Error404Component },
+  { path: '**', redirectTo: '404', pathMatch: 'full' }
 ];

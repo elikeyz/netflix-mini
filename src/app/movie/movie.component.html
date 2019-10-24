@@ -1,3 +1,34 @@
 <main class="container">
-  <p>movie {{ movie?.imdbID }} works!</p>
+  <h1>{{ movie.Title }} ({{ movie.Year }})</h1>
+  <br>
+  <div class="row">
+    <div class="col-md-6">
+      <p><strong>Genre: </strong>{{ movie.Genre }}</p>
+      <p><strong>Rating: </strong>{{ movie.Rated }}</p>
+      <p><strong>Released: </strong>{{ movie.Released }}</p>
+      <p><strong>DVD Release: </strong>{{ movie.DVD }}</p>
+      <p><strong>Production: </strong>{{ movie.Production }}</p>
+      <p><strong>Director: </strong>{{ movie.Director }}</p>
+    </div>
+    <div class="col-md-6">
+      <p><strong>Starring: </strong>{{ movie.Actors }}</p>
+      <p><strong>Writer: </strong>{{ movie.Writer }}</p>
+      <p><strong>Language: </strong>{{ movie.Language }}</p>
+      <p><strong>Country: </strong>{{ movie.Country }}</p>
+      <p><strong>Awards: </strong>{{ movie.Awards }}</p>
+      <p><strong>Movie Runtime: </strong>{{ movie.Runtime }}</p>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-md-6 mb-5">
+      <figure>
+        <img [src]="movie.Poster" [alt]="movie.Title" class="poster">
+        <figcaption>{{ movie.Title }}</figcaption>
+      </figure>
+    </div>
+    <div class="col-md-6">
+      <p>{{ movie.Plot }}</p>
+    </div>
+  </div>
 </main>
