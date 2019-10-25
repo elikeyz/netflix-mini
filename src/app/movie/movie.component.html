@@ -1,5 +1,8 @@
 <main class="container">
   <h1>{{ movie.Title }} ({{ movie.Year }})</h1>
+  <fa-icon *ngIf="!isFavorite()" (click)="addToFavorites()" [icon]="faStarRegular" class="star-icon"></fa-icon>
+  <fa-icon *ngIf="isFavorite()" (click)="removeFromFavorites()" [icon]="faStarSolid" class="star-icon"></fa-icon>
+  <br>
   <br>
   <div class="row">
     <div class="col-md-6">

@@ -16,14 +16,24 @@
   </div>
   <div class="row">
     <div *ngFor="let movie of movies" class="col-md-4 col-sm-6 col-xs-12 my-3">
-      <a class="card-link" [routerLink]="['/movies', movie.imdbID]">
-        <div class="card bg-secondary">
-          <img class="card-img-top" [src]="movie.Poster" [alt]="movie.Title">
-          <div class="card-body">
-            <h6 class="card-title">{{ movie.Title }} ({{ movie.Year }})</h6>
+      <div class="card bg-secondary">
+        <img class="card-img-top" [src]="movie.Poster" [alt]="movie.Title">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-10">
+              <h6 class="card-title">{{ movie.Title }} ({{ movie.Year }})</h6>
+            </div>
+            <div class="col-2">
+              <fa-icon *ngIf="!isFavorite(movie)" (click)="addToFavorites(movie)" class="star-icon" [icon]="faStarRegular"></fa-icon>
+              <fa-icon *ngIf="isFavorite(movie)" (click)="removeFromFavorites(movie)" class="star-icon" [icon]="faStarSolid"></fa-icon>
+            </div>
           </div>
+          <br>
+          <a class="card-link" [routerLink]="['/movies', movie.imdbID]">
+            <button class="btn btn-block btn-danger">View</button>
+          </a>
         </div>
-      </a>
+      </div>
     </div>
   </div>
 </main>

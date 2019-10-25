@@ -4,6 +4,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
@@ -14,6 +15,8 @@ import { MovieService } from './movie.service';
 import { MovieComponent } from './movie/movie.component';
 import { Error404Component } from './error404/error404.component';
 import { SESSION_STORAGE_TOKEN, SessionStorage } from './session-storage.service';
+import { FavoritesService } from './favorites/favorites.service';
+import { FavoritesComponent } from './favorites/favorites.component';
 
 const sessionStorage: SessionStorage = window['sessionStorage'];
 
@@ -24,17 +27,20 @@ const sessionStorage: SessionStorage = window['sessionStorage'];
     LandingComponent,
     MoviesComponent,
     MovieComponent,
-    Error404Component
+    Error404Component,
+    FavoritesComponent
   ],
   imports: [
     BrowserModule,
     NgbModule,
     RouterModule.forRoot(appRoutes),
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FontAwesomeModule
   ],
   providers: [
     MovieService,
+    FavoritesService,
     { provide: SESSION_STORAGE_TOKEN, useValue: sessionStorage }
   ],
   bootstrap: [AppComponent]

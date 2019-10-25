@@ -5,3 +5,8 @@ main {
 figcaption {
   font-weight: bold;
 }
+
+.star-icon {
+  color: #D4AF37;
+  cursor: pointer;
+}

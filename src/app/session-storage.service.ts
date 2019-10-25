@@ -5,4 +5,4 @@ export interface SessionStorage {
   getItem(key: string): string;
 }
 
-export let SESSION_STORAGE_TOKEN = new InjectionToken<SessionStorage>('sessionStorage');
+export const SESSION_STORAGE_TOKEN = new InjectionToken<SessionStorage>('sessionStorage');
