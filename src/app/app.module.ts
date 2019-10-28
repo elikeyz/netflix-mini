@@ -17,6 +17,7 @@ import { Error404Component } from './error404/error404.component';
 import { SESSION_STORAGE_TOKEN, SessionStorage } from './session-storage.service';
 import { FavoritesService } from './favorites/favorites.service';
 import { FavoritesComponent } from './favorites/favorites.component';
+import { MovieCardComponent } from './movie-card/movie-card.component';
 
 const sessionStorage: SessionStorage = window['sessionStorage'];
 
@@ -28,7 +29,8 @@ const sessionStorage: SessionStorage = window['sessionStorage'];
     MoviesComponent,
     MovieComponent,
     Error404Component,
-    FavoritesComponent
+    FavoritesComponent,
+    MovieCardComponent
   ],
   imports: [
     BrowserModule,

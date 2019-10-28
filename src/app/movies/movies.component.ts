@@ -1,8 +1,5 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { faStar as faStarSolid } from '@fortawesome/free-solid-svg-icons';
-import { faStar as faStarRegular } from '@fortawesome/free-regular-svg-icons';
 import { MovieService } from '../movie.service';
-import { FavoritesService } from '../favorites/favorites.service';
 import { IMovie } from '../movie.model';
 
 @Component({
@@ -15,10 +12,8 @@ export class MoviesComponent implements OnInit {
   nextPage = 1;
   movies: IMovie[];
   isLoadingMovies = false;
-  faStarSolid = faStarSolid;
-  faStarRegular = faStarRegular;
 
-  constructor(private movieService: MovieService, private favoritesService: FavoritesService) { }
+  constructor(private movieService: MovieService) { }
 
   ngOnInit() {
 
@@ -34,18 +29,6 @@ export class MoviesComponent implements OnInit {
         this.nextPage = this.nextPage + 1;
         this.isLoadingMovies = false;
       });
-  }
-
-  addToFavorites(movie: IMovie): void {
-    this.favoritesService.addToFavorites(movie);
-  }
-
-  removeFromFavorites(movie: IMovie): void {
-    this.favoritesService.removeFromFavorites(movie);
-  }
-
-  isFavorite(movie: IMovie): boolean {
-    return this.favoritesService.isFavorite(movie);
   }
 
 }

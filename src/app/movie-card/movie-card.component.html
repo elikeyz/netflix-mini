@@ -1,0 +1,21 @@
+<div>
+  <div class="card bg-secondary">
+    <img class="card-img-top" [src]="movie.Poster" [alt]="movie.Title">
+    <div class="card-body">
+      <h6 *ngIf="!star" class="card-title">{{ movie.Title }} ({{ movie.Year }})</h6>
+      <div *ngIf="star" class="row">
+        <div class="col-10">
+          <h6 class="card-title">{{ movie.Title }} ({{ movie.Year }})</h6>
+        </div>
+        <div class="col-2">
+          <fa-icon *ngIf="!isFavorite()" (click)="addToFavorites()" class="star-icon" [icon]="faStarRegular"></fa-icon>
+          <fa-icon *ngIf="isFavorite()" (click)="removeFromFavorites()" class="star-icon" [icon]="faStarSolid"></fa-icon>
+        </div>
+      </div>
+      <br>
+      <a class="card-link" [routerLink]="['/movies', movie.imdbID]">
+        <button class="btn btn-block btn-danger">View</button>
+      </a>
+    </div>
+  </div>
+</div>
