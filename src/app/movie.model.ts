@@ -33,4 +33,6 @@ export interface IMovie {
 
 export interface IMovieSearch {
   Search: IMovie[];
+  totalResults: string;
+  Response: string;
 }
