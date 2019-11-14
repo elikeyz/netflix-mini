@@ -28,7 +28,7 @@ export interface IMovie {
   Production?: string;
   Website?: string;
   Response?: string;
-  Rating?: IRating[];
+  Ratings?: IRating[];
 }
 
 export interface IMovieSearch {

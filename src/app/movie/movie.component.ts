@@ -16,7 +16,7 @@ export class MovieComponent implements OnInit {
   faStarSolid = faStarSolid;
   faStarRegular = faStarRegular;
 
-  constructor(private route: ActivatedRoute, private movieService: MovieService, private favoritesServive: FavoritesService) { }
+  constructor(private route: ActivatedRoute, private favoritesService: FavoritesService) { }
 
   ngOnInit() {
     this.route.data.forEach((data) => {
@@ -25,15 +25,15 @@ export class MovieComponent implements OnInit {
   }
 
   addToFavorites(): void {
-    this.favoritesServive.addToFavorites(this.movie);
+    this.favoritesService.addToFavorites(this.movie);
   }
 
   removeFromFavorites(): void {
-    this.favoritesServive.removeFromFavorites(this.movie);
+    this.favoritesService.removeFromFavorites(this.movie);
   }
 
   isFavorite(): boolean {
-    return this.favoritesServive.isFavorite(this.movie);
+    return this.favoritesService.isFavorite(this.movie);
   }
 
 }
