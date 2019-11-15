@@ -1,5 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { By } from '@angular/platform-browser';
 
 import { FavoritesComponent } from './favorites.component';
 import { FavoritesService } from './favorites.service';
@@ -77,6 +78,7 @@ describe('FavoritesComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+    expect(fixture.debugElement.query(By.css('h1')).nativeElement.textContent).toContain('Favorites');
   });
 
   it('should get the list of movies from favorites service', () => {

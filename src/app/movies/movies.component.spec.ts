@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { By } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { of } from 'rxjs';
@@ -67,6 +68,7 @@ describe('MoviesComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+    expect(fixture.debugElement.query(By.css('h1')).nativeElement.textContent).toContain('Search Movies and Series');
   });
 
   it('should call movieService.searchMovies when search is called', () => {

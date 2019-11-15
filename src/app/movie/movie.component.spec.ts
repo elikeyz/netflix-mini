@@ -74,6 +74,7 @@ describe('MovieComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+    expect(fixture.debugElement.query(By.css('h1')).nativeElement.textContent).toContain('Avengers: Infinity War (2018)');
   });
 
   it('should add the movie to favorites if the hollow star icon is clicked', () => {

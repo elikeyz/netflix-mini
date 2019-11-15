@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { faStar as faStarSolid } from '@fortawesome/free-solid-svg-icons';
 import { faStar as faStarRegular } from '@fortawesome/free-regular-svg-icons';
-import { MovieService } from '../movie.service';
 import { FavoritesService } from '../favorites/favorites.service';
 import { IMovie } from '../movie.model';
 

@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { By } from '@angular/platform-browser';
 
 import { LandingComponent } from './landing.component';
 import { RouterLinkDirectiveStub } from '../test/router-link-directive-stub.directive';
@@ -25,5 +26,6 @@ describe('LandingComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+    expect(fixture.debugElement.query(By.css('h1')).nativeElement.textContent).toContain('Explore Netflix Mini');
   });
 });
