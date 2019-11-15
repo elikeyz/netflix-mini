@@ -5,7 +5,7 @@ import { FavoritesComponent } from './favorites.component';
 import { FavoritesService } from './favorites.service';
 import { IMovie } from '../movie.model';
 import { MovieCardComponent } from '../movie-card/movie-card.component';
-import { RouterLinkDirectiveStub } from '../router-link-directive-stub.directive';
+import { RouterLinkDirectiveStub } from '../test/router-link-directive-stub.directive';
 
 describe('FavoritesComponent', () => {
   let component: FavoritesComponent;

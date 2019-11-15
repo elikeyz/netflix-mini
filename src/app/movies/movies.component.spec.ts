@@ -6,7 +6,7 @@ import { of } from 'rxjs';
 import { MoviesComponent } from './movies.component';
 import { MovieService } from '../movie.service';
 import { MovieCardComponent } from '../movie-card/movie-card.component';
-import { RouterLinkDirectiveStub } from '../router-link-directive-stub.directive';
+import { RouterLinkDirectiveStub } from '../test/router-link-directive-stub.directive';
 import { IMovieSearch } from '../movie.model';
 
 describe('MoviesComponent', () => {

@@ -4,7 +4,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { MovieCardComponent } from './movie-card.component';
 import { FavoritesService } from '../favorites/favorites.service';
-import { RouterLinkDirectiveStub } from '../router-link-directive-stub.directive';
+import { RouterLinkDirectiveStub } from '../test/router-link-directive-stub.directive';
 
 describe('MovieCardComponent', () => {
   let component: MovieCardComponent;

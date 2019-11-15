@@ -3,7 +3,7 @@ import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { NavBarComponent } from './nav-bar.component';
-import { RouterLinkDirectiveStub } from '../router-link-directive-stub.directive';
+import { RouterLinkDirectiveStub } from '../test/router-link-directive-stub.directive';
 
 describe('NavBarComponent', () => {
   let component: NavBarComponent;
